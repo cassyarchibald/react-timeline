@@ -1,18 +1,13 @@
 import React, { Component } from "react";
 import "./App.css";
+import "./data/timeline.json";
 import timelineData from "./data/timeline.json";
+import TimelineEvent from "./components/TimelineEvent";
 import Timestamp from "./components/Timestamp";
 import Timeline from "./components/Timeline";
-const testTimelineData = {
-  person: "Cassy",
-  status: "Active",
-  timestamp: Timestamp
-};
+
 class App extends Component {
   render() {
-    console.log(testTimelineData);
-    console.log(timelineData);
-
     // Customize the code below
     // Will pass the timeline e ents to the Timeline component
     return (
@@ -20,6 +15,12 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Application title</h1>
         </header>
+        <TimelineEvent
+          person="Cassy"
+          statusMessage="Active"
+          timestamp={"Test"}
+        />
+
         <main className="App-main" />
       </div>
     );
