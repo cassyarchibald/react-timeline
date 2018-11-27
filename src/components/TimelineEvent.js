@@ -7,10 +7,12 @@ const TimelineEvent = props => {
   // Will take an timeline event data and render it
   // person, status message, timestamp (component)
   return (
-    <section className="timelineevent">
+    <section className="timeline-event">
       <h2>{props.person}</h2>
-      <p>{props.statusMessage}</p>
-      <p>{<Timestamp />}</p>
+      <p>{props.status}</p>
+      <p>
+        <Timestamp time={props.timeStamp} />
+      </p>
     </section>
   );
 };

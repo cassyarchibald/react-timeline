@@ -15,12 +15,9 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Application title</h1>
         </header>
-        <TimelineEvent
-          person="Cassy"
-          statusMessage="Active"
-          timestamp={"Test"}
-        />
-
+        <p>
+          <Timeline events={timelineData.events} />
+        </p>
         <main className="App-main" />
       </div>
     );
